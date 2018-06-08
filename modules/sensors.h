@@ -31,6 +31,7 @@ class Sensors : public Task
         cmd = "{" + String (Air::instance()->GetTemperature() ) 
         + "," + String (Air::instance()->GetHumidity() ) 
         + "," + String (CO2::instance()->GetCO2() )  + "}";
+        toHq.println(cmd);
         Serial.println(cmd);
     }
 };
